@@ -1,6 +1,8 @@
 <template>
   <div class="bg-gray-900">
-    <h1 class="text-center text-white text-md lg:text-lg py-2">Yu-Gi-Oh! Cards Info</h1>
+    <h1 class="text-center text-white text-md lg:text-lg py-2">
+      Yu-Gi-Oh! Cards Info
+    </h1>
     <div class="container flex flex-wrap mx-auto">
       <div v-for="card in cards" :key="card.id" class="w-1/2 lg:w-1/3 p-2">
         <div class="bg-white rounded overflow-hidden">
@@ -17,8 +19,20 @@
       </div>
     </div>
     <div class="container flex flex-row justify-end mx-auto py-3 px-2">
-      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" v-if="meta.previous_page !== undefined" @click="getCards(meta.previous_page)">prev</button>
-      <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow ml-2" v-if="meta.next_page !== undefined" @click="getCards(meta.next_page)">next</button>
+      <button
+        v-if="meta.previous_page !== undefined"
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+        @click="getCards(meta.previous_page)"
+      >
+        Prev
+      </button>
+      <button
+        v-if="meta.next_page !== undefined"
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow ml-2"
+        @click="getCards(meta.next_page)"
+      >
+        Next
+      </button>
     </div>
   </div>
 </template>
