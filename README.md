@@ -1,4 +1,4 @@
-# nuxt-example
+# nuxt-tailwind-starter
 
 ## Build Setup
 
