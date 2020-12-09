@@ -3,9 +3,15 @@
     <div class="self-center">
       <nuxt-logo />
       <h1 class="text-4xl lg:text-6xl text-center my-4">
-        nuxt-example
+        nuxt-tailwind-starter
       </h1>
       <div class="flex flex-row justify-center">
+        <nuxt-link
+          to="/example"
+          class="bg-transparent hover:bg-green-800 text-green-800 hover:text-white border border-green-800 font-semibold p-4 rounded items-center mr-4"
+        >
+          Example Component
+        </nuxt-link>
         <nuxt-link
           to="/about"
           class="bg-transparent hover:bg-green-800 text-green-800 hover:text-white border border-green-800 font-semibold p-4 rounded items-center mr-4"
